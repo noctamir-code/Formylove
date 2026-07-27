@@ -31,21 +31,14 @@
             box-shadow: 0 15px 35px rgba(163, 83, 83, 0.12);
             text-align: center;
             border: 1px solid #f5e1e1;
+            position: relative;
         }
 
-        .photo-frame {
-            width: 100%;
-            height: 220px;
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .cat-header {
+            width: 120px;
+            height: auto;
+            margin: 0 auto 10px auto;
+            display: block;
         }
 
         h1 {
@@ -96,17 +89,31 @@
 <body>
 
     <div class="container">
-        <div class="photo-frame">
-            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80" alt="Love image">
-        </div>
+        <!-- Cute basil cat icon at the top -->
+        <svg class="cat-header" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 15C35 15 25 28 25 45C25 60 35 70 50 70C65 70 75 60 75 45C75 28 65 15 50 15Z" fill="#94C973"/>
+            <path d="M28 25L18 12C18 12 25 10 33 18L28 25Z" fill="#78B159"/>
+            <path d="M72 25L82 12C82 12 75 10 67 18L72 25Z" fill="#78B159"/>
+            <circle cx="42" cy="40" r="3" fill="#2C3E50"/>
+            <circle cx="58" cy="40" r="3" fill="#2C3E50"/>
+            <path d="M47 46C47 46 48.5 48 50 48C51.5 48 53 46 53 46" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Basil Leaf on Head -->
+            <path d="M50 12C50 12 43 4 38 7C33 10 38 18 50 15C62 18 67 10 62 7C57 4 50 12 50 12Z" fill="#5B9A32"/>
+            <path d="M50 7V15" stroke="#487A27" stroke-width="1"/>
+            <!-- Heart Held in Paws -->
+            <path d="M50 63C50 63 38 53 38 45C38 40.5 41.5 37 46 37C48.5 37 50 38.5 50 38.5C50 38.5 51.5 37 54 37C58.5 37 62 40.5 62 45C62 53 50 63 50 63Z" fill="#E74C3C"/>
+            <!-- Paws -->
+            <circle cx="37" cy="48" r="4" fill="#78B159"/>
+            <circle cx="63" cy="48" r="4" fill="#78B159"/>
+        </svg>
 
         <h1>For My Love ❤️</h1>
 
-        <!-- Reliable YouTube Player Embed -->
+        <!-- YouTube Official Lyric Video Embed -->
         <div class="video-container">
             <iframe 
-                src="https://www.youtube-nocookie.com/embed/m1mkYWkoXyo?rel=0" 
-                title="Ruelle - I Get To Love You" 
+                src="https://www.youtube-nocookie.com/embed/wMgzldfzVjQ?rel=0" 
+                title="RUELLE - I Get To Love You (Official Lyric Video)" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
@@ -114,11 +121,11 @@
 
         <div class="letter-card">
             <div class="letter-content">
-Хайраа, чамдаа үнэхээр их хайртай. 
+Hairaa, hairn hairdaa zunduu hairtai. 
 
-Энэ бүх стресс, хэцүү цаг үеийг давахад би хажууд чинь хамгийн үнэнч найз, хайрт чинь байх болно. ❤️ 🤗
+Ene buh stsress, hetssuu tsag uyiig davahad bi hajuudn hamgiin unen nz, hairt chini bh boln. ❤️ 🤗
 
-Яарах шаардлагагүй, зүгээр л намайг хаана байсныг санахад л хангалттай. Би чамайг бүрэн ойлгож байгаа, чамаас хаашаа ч явахгүй ээ. 🥰
+Yarah shaardlggui, jugeerl hairigaa haana bgag sanahdl hanglttai. Bi hairiigaa buren oilgoj baigaa, bi haashaa ch yvahgue. 🥰
             </div>
         </div>
 
