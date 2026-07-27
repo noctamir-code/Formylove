@@ -31,14 +31,21 @@
             box-shadow: 0 15px 35px rgba(163, 83, 83, 0.12);
             text-align: center;
             border: 1px solid #f5e1e1;
-            position: relative;
         }
 
-        .cat-header {
-            width: 120px;
-            height: auto;
-            margin: 0 auto 10px auto;
-            display: block;
+        .photo-frame {
+            width: 100%;
+            height: 220px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         h1 {
@@ -89,8 +96,9 @@
 <body>
 
     <div class="container">
-        <div>
-            <img src="https://x.com/BasiilLeaf/status/1681758096232964097" alt="">
+        <!-- Placeholder Image Top Frame -->
+        <div class="photo-frame">
+            <img src="https://via.placeholder.com/600x400/f8d7da/721c24?text=Your+Photo+Here" alt="Placeholder Image">
         </div>
 
         <h1>For My Love ❤️</h1>
@@ -107,11 +115,11 @@
 
         <div class="letter-card">
             <div class="letter-content">
-Hairaa, hairn hairdaa zunduu hairtai. 
+Хайраа, чамдаа үнэхээр их хайртай. 
 
-Ene buh stsress, hetssuu tsag uyiig davahad bi hajuudn hamgiin unen nz, hairt chini bh boln. ❤️ 🤗
+Энэ бүх стресс, хэцүү цаг үеийг давахад би хажууд чинь хамгийн үнэнч найз, хайрт чинь байх болно. ❤️ 🤗
 
-Yarah shaardlggui, jugeerl hairigaa haana bgag sanahdl hanglttai. Bi hairiigaa buren oilgoj baigaa, bi haashaa ch yvahgue. 🥰
+Яарах шаардлагагүй, зүгээр л намайг хаана байсныг санахад л хангалттай. Би чамайг бүрэн ойлгож байгаа, чамаас хаашаа ч явахгүй ээ. 🥰
             </div>
         </div>
 
