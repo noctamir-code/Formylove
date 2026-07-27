@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #faf5f5;
+            color: #4a3e3e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            max-width: 500px;
+            width: 100%;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border: 1px solid #f0e6e6;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: #a35353;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .music-player {
+            background: #fff8f8;
+            border: 1px solid #f0d8d8;
+            border-radius: 12px;
+            padding: 12px 15px;
+            margin: 20px 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .music-info {
+            text-align: left;
+            font-size: 0.85rem;
+        }
+
+        .music-title {
+            font-weight: bold;
+            color: #5c3a3a;
+        }
+
+        .music-artist {
+            color: #8c7b7b;
+        }
+
+        .play-btn {
+            background-color: #a35353;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .play-btn:hover {
+            background-color: #8a4141;
+        }
+
+        .letter-content {
+            text-align: left;
+            line-height: 1.8;
+            font-size: 1rem;
+            color: #524646;
+            white-space: pre-line;
+        }
+
+        .footer-heart {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #a35353;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>For My Love ❤️</h1>
+
+        <div class="music-player">
+            <div class="music-info">
+                <div class="music-title">I Get to Love You</div>
+                <div class="music-artist">Ruelle</div>
+            </div>
+            <button class="play-btn" id="playBtn" onclick="toggleAudio()">▶ Play</button>
+        </div>
+
+        <div class="letter-content">
+Хайраа, чамдаа үнэхээр их хайртай. Энэ бүх стресс, хэцүү цаг үеийг давахад би хажууд чинь хамгийн үнэнч найз, хайрт чинь байх болно. ❤️ 🤗
+
+Яарах шаардлагагүй, зүгээр л намайг хаана байсныг санахад л хангалттай. Би чамайг бүрэн ойлгож байгаа, чамаас хаашаа ч явахгүй ээ. 🥰
+        </div>
+
+        <div class="footer-heart">✨</div>
+    </div>
+
+    <!-- YouTube audio player iframe embedded in background -->
+    <iframe id="youtube-player" style="display:none;" width="0" height="0" 
+        src="https://www.youtube.com/watch?v=DUobIN2EMec&list=RDDUobIN2EMec" 
+        allow="autoplay">
+    </iframe>
+
+    <script>
+        var player;
+        
+        // Load YouTube IFrame Player API asynchronously
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player');
+        }
+
+        var isPlaying = false;
+        function toggleAudio() {
+            var btn = document.getElementById('playBtn');
+            if (!isPlaying) {
+                player.playVideo();
+                btn.innerText = "⏸ Pause";
+                isPlaying = true;
+            } else {
+                player.pauseVideo();
+                btn.innerText = "▶ Play";
+                isPlaying = false;
+            }
+        }
+    </script>
+</body>
+</html>
